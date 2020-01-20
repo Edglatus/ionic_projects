@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FormProdutos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="produto.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Descrição</ion-label>
+      <ion-input type="text" name="descricao" [(ngModel)]="produto.descricao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Preco</ion-label>
+      <ion-input type="text" name="preco" [(ngModel)]="produto.preco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Quantidade</ion-label>
+      <ion-input type="text" name="qtde" [(ngModel)]="produto.qtde"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categoria</ion-label>
+      <ion-select placeholder="Select One" name="categoria_id" [(ngModel)]="produto.categoriaId">
+        <ion-select-option *ngFor="let c of categorias | async" value="{{c.id}}">{{c.nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button block (click)="save()">Salvar</ion-button>
+</ion-content>

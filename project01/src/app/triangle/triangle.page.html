@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Triangle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-label>Height: </ion-label>
+        <ion-input type="text" [(ngModel)]="height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Base: </ion-label>
+        <ion-input type="text" [(ngModel)]="base"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="getArea()">Get Area</ion-button>
+  </div>
+</ion-content>

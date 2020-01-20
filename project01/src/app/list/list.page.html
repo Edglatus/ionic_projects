@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Student List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item-sliding *ngFor="let s of students">
+      {{s.name}} {{s.grade}}
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list>
+    <ion-text>
+      <h1>Create New Student:</h1>
+    </ion-text>
+
+    <ion-item>
+      <ion-label>Name: </ion-label>
+      <ion-input type="text" [(ngModel)]="name" placeholder="Josicleison"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Grade: </ion-label>
+      <ion-input type="text" [(ngModel)]="grade" placeholder="0"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="saveNew()">Save</ion-button>
+</ion-content>
